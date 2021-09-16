@@ -106,13 +106,7 @@
     "**/env": true,
     "**/venv": true
   },
-  "spellright.documentTypes": [
-    "markdown",
-    "latex",
-    "plaintext",
-    "html",
-    "typescript"
-  ],
+  "spellright.documentTypes": ["markdown", "latex", "plaintext", "html", "typescript"],
   "spellright.ignoreFiles": [
     "**/.gitignore",
     "**/.spellignore",
@@ -120,7 +114,7 @@
     "/dist/",
     "/tmp/"
   ],
-  "spellright.language": ["en"],
+  "spellright.language": ["en", "es"],
   "typescript.preferences.includePackageJsonAutoImports": "on",
   "window.title": "${dirty}${activeEditorMedium}",
   "workbench.colorCustomizations": {
