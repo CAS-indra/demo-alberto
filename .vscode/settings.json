@@ -106,7 +106,7 @@
     "**/env": true,
     "**/venv": true
   },
-  "spellright.documentTypes": ["markdown", "latex", "plaintext", "html", "typescript"],
+  "spellright.documentTypes": ["markdown", "latex", "plaintext", "typescript"],
   "spellright.ignoreFiles": [
     "**/.gitignore",
     "**/.spellignore",
@@ -132,5 +132,5 @@
   },
   "workbench.colorTheme": "Cobalt2",
   "workbench.iconTheme": "material-icon-theme",
-  "window.zoomLevel": 2
+  "window.zoomLevel": 3
 }
