@@ -1,26 +1,7 @@
 <app-cabecera></app-cabecera>
-<app-titulo></app-titulo>
-
-<h3 [style.color]="color"> Tengo {{ proyectos.length }} proyectos </h3>
-
-<progress *ngIf="elValor>0"
-          [value]="elValor"
-          max="10"></progress>
-
-<button (click)="incrementar()">Incrementar</button>
-<button (click)="reducir()">Reducir</button>
-
-<div *ngFor="let proyecto of proyectos">
-  <span [ngClass]="{ 'active': proyecto.status==1, 'pending': proyecto.status==0 }">
-    💥 {{ proyecto.name }} - {{ proyecto.status }}
-  </span>
-</div>
-
-
-<p> El múltiplo 3 de {{ elValor }} es {{ multiplo(3) }} </p>
-
-
+<hr>
 
 <router-outlet></router-outlet>
 
+<hr>
 <app-pie></app-pie>

@@ -130,7 +130,7 @@
     "tab.activeBorder": "#FFFF00",
     "tab.activeBackground": "#193549"
   },
-  "workbench.colorTheme": "Cobalt2",
+  "workbench.colorTheme": "Default Dark+",
   "workbench.iconTheme": "material-icon-theme",
   "window.zoomLevel": 3
 }
