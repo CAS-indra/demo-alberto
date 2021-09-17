@@ -2,8 +2,14 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-titulo',
-  templateUrl: './titulo.component.html',
-  styleUrls: ['./titulo.component.scss'],
+  template: ` <h1>{{ title }} funciona!</h1> `,
+  styles: [
+    `
+      h1 {
+        color: green;
+      }
+    `,
+  ],
 })
 export class TituloComponent {
   title = 'App demo de Alberto';

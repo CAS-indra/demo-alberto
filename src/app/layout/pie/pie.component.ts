@@ -6,10 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pie.component.scss'],
 })
 export class PieComponent implements OnInit {
-  public desarrollador = 'Alberto';
-
-  public fecha = new Date();
-
   constructor() {}
 
   ngOnInit(): void {}
