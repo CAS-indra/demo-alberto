@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProyectosService } from '../data/proyectos.service';
 
 @Component({
   selector: 'app-home',
@@ -6,19 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  public proyectos = [
-    {
-      name: 'Aprender angular',
-      status: 1,
-    },
-    {
-      name: 'Tener un buen trabajo',
-      status: 0,
-    },
-  ];
+  public proyectos = this.service.getProyectos();
   public color = 'brown';
 
   public elValor = 5;
+
+  constructor(private service: ProyectosService) {}
 
   public multiplo(cantidad: number): number {
     return cantidad * this.elValor;

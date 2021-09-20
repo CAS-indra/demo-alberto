@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProjectEditorComponent } from './project-editor.component';
 
 const routes: Routes = [
-  { path: '', component: ProjectEditorComponent },
+  // { path: '', component: ProjectEditorComponent },
   { path: ':id', component: ProjectEditorComponent },
 ];
 
