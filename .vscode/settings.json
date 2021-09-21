@@ -76,10 +76,9 @@
   ],
   "spellright.language": ["en", "es"],
   "typescript.preferences.includePackageJsonAutoImports": "on",
-  // LIVE settings
-  "editor.fontSize": 16,
   "github.copilot.enable": {
     "*": false
   },
-  "window.zoomLevel": 2
+  "window.zoomLevel": 2,
+  "editor.lineNumbers": "off"
 }

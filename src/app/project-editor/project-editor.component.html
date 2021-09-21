@@ -1,3 +1,6 @@
 <h3> Proyecto: {{ projectId }} </h3>
-<h2>{{ project.name }}</h2>
-<h4>{{ project.budget }} € </h4>
+
+<div *ngIf="project$ | async as project">
+  <h2>{{ project.name }}</h2>
+  <h4>{{ project.budget }} € </h4>
+</div>

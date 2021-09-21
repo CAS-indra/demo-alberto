@@ -1,25 +1,41 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProyectosService {
-  private proyectos = [
-    {
-      id: 'aprender-angular',
-      name: 'Aprender angular',
-      budget: 500,
-      status: 1,
-    },
-    {
-      id: 'tener-un-buen-trabajo',
-      name: 'Tener un buen trabajo',
-      budget: 50,
-      status: 0,
-    },
-  ];
-  constructor() {}
+  // private proyectos = [
+  //   {
+  //     id: 'aprender-angular',
+  //     name: 'Aprender angular',
+  //     budget: 500,
+  //     status: 1,
+  //   },
+  //   {
+  //     id: 'tener-un-buen-trabajo',
+  //     name: 'Tener un buen trabajo',
+  //     budget: 50,
+  //     status: 0,
+  //   },
+  // ];
+  constructor(private http: HttpClient) {}
+
   public getProyectos(): any[] {
-    return this.proyectos;
+    return []; // this.proyectos;
+  }
+
+  public getProyectos$(): Observable<{ data: any[] }> {
+    return this.http.get<{ data: any[] }>(
+      'https://proton-angular-builders.herokuapp.com/v1/projects',
+    );
+  }
+
+  public getProyectoById$(id: string): Observable<any> {
+    return this.http
+      .get<any>('https://proton-angular-builders.herokuapp.com/v1/projects/' + id)
+      .pipe(map(res => res.data));
   }
 }

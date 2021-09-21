@@ -1,6 +1,6 @@
 <app-titulo></app-titulo>
 
-<h3 [style.color]="color"> Tengo {{ proyectos.length }} proyectos </h3>
+<h3 [style.color]="color"> Tengo {{ proyectos?.length }} proyectos </h3>
 
 <progress *ngIf="elValor>0"
           [value]="elValor"
@@ -9,10 +9,12 @@
 <button (click)="incrementar()">Incrementar</button>
 <button (click)="reducir()">Reducir</button>
 
-<div *ngFor="let proyecto of proyectos">
-  <span [ngClass]="{ 'active': proyecto.status==1, 'pending': proyecto.status==0 }">
-    💥<a routerLink="./project-editor/{{proyecto.id}}"> {{ proyecto.name }}</a>
-  </span>
+<div *ngIf="proyectos">
+  <div *ngFor="let proyecto of proyectos">
+    <span [ngClass]="{ 'active': proyecto.status==1, 'pending': proyecto.status==0 }">
+      💥<a routerLink="./project-editor/{{proyecto.id}}"> {{ proyecto.name }}</a>
+    </span>
+  </div>
 </div>
 
 
