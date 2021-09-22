@@ -10,7 +10,7 @@ import { ProyectosService } from '../data/proyectos.service';
 })
 export class ProjectEditorComponent implements OnInit {
   public projectId = '';
-  //public project = { name: '', budget: 0 };
+  // public project = { name: '', budget: 0 };
   public project$: Observable<any>;
   constructor(private route: ActivatedRoute, private service: ProyectosService) {
     // const projectId = route.snapshot.params['id'];
@@ -21,8 +21,8 @@ export class ProjectEditorComponent implements OnInit {
 
   ngOnInit(): void {
     // this.projectId = this.route.snapshot.params['id'];
-    //const projects = this.service.getProyectos();
-    //this.project = projects.find(p => p.id === this.projectId);
+    // const projects = this.service.getProyectos();
+    // this.project = projects.find(p => p.id === this.projectId);
     // this.service
     //   .getProyectoById$(this.projectId)
     //   .subscribe({ next: data => (this.project = data) });
@@ -32,11 +32,11 @@ export class ProjectEditorComponent implements OnInit {
 // const x = new ProjectEditorComponent(  );
 
 class Alumno {
-  //public nombre = '';
+  // public nombre = '';
   public edad = 0;
 
   constructor(public nombre: string) {
-    //this.nombre = nombre;
+    // this.nombre = nombre;
   }
 
   imprimir() {
