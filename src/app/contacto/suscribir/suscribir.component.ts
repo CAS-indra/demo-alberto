@@ -7,9 +7,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class SuscribirComponent {
   @Output() public subscribe = new EventEmitter<void>();
-
   constructor() {}
-
   public onSubscribeClick(): void {
     console.log('quiero suscribirme');
     this.subscribe.next();
