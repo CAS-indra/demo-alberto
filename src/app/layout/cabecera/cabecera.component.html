@@ -1,5 +1,6 @@
 <header>
   <h1 routerLink=""> {{ empresa }}</h1>
+  <span *ngIf="message">{{ message }}</span>
   <nav>
     <a routerLink="projects/new">
       ➕ Nuevo projecto

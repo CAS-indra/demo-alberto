@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { GlobalService } from '../data/global.service';
 import { ProyectosService } from '../data/proyectos.service';
 
 @Component({
@@ -9,8 +10,8 @@ import { ProyectosService } from '../data/proyectos.service';
 })
 export class ProjectCreatorComponent {
   public formGroup: FormGroup;
-  public message = '';
-  constructor(fb: FormBuilder, private service: ProyectosService) {
+
+  constructor(fb: FormBuilder, private service: ProyectosService, private global: GlobalService) {
     this.formGroup = fb.group({
       name: [
         'Apagar un volcán',
@@ -28,9 +29,12 @@ export class ProjectCreatorComponent {
   public submitProject(): void {
     console.log('Enviando...');
     console.log(this.formGroup.value);
-    // To Do: llamar al servicio y hacer el post
     this.service.postProyecto$(this.formGroup.value).subscribe({
-      error: err => (this.message = err.message),
+      error: err => {
+        console.log(err.message);
+        // this.global.message = err.message;
+        this.global.setMessage(err.message);
+      },
     });
   }
 }
